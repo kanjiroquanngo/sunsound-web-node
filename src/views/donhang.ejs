@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Sound - Solar Moment</title>
+    <link rel="stylesheet" href="/css/donhang.css" />
+    <script
+      src="https://kit.fontawesome.com/ebbc506540.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="I:/fontawesome/css/fontawesome.css"
+    />
+  </head>
+  <body>
+    <header style="position: static; background-color: ivory">
+      <img
+        class="logo"
+        src="/image/logo.png"
+        alt="Not found"
+        onclick="dieuhuonglogo();"
+      />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#" onclick="dieuhuonglogo();">Trang chủ</a></li>
+          <li>
+            <a href="#" onclick="dieu_huongvechungtoi();">Về chúng tôi</a>
+          </li>
+          <li><a href="#" onclick="dieu_huongsanpham();">Sản phẩm</a></li>
+          <li><a href="#" onclick="dieu_huongdonhang();">Đơn hàng</a></li>
+          <li><a href="#" onclick="dieu_huongtintuc();">Tin tức</a></li>
+          <li>
+            <a href="#" onclick="dieu_huongquanhedt();">Quan hệ đối tác</a>
+          </li>
+          <li><a href="#" onclick="dieu_huongphanhoi();">Phản hồi</a></li>
+          <li><a href="#" onclick="dieu_huonglienhe();">Giỏ hàng</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="background" style="background-color: cadetblue">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <!-- <span>Đặt</span> -->
+                <span>Đặt hàng</span>
+              </div>
+              <div class="app-contact">Mọi thắc mắc vui lòng liên hệ: 0972846366</div>
+            </div>
+            <div class="screen-body-item">
+                <form action="/createNewOrders" method="POST" enctype="application/x-www-form-urlencoded">
+              <div class="app-form">
+                <div class="app-form-group">
+                  <input class="app-form-control" type="text" placeholder="Tên sản phẩm" name="fullname" value="Loa đa năng Sun Sound"/> 
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" type="text" placeholder="Số lượng muốn đặt" name ="amount" required/>
+                </div>
+                <div class="app-form-group">
+                  <input
+                    class="app-form-control"
+                    type="text"
+                    placeholder="Tên khách hàng"
+                    name="customername"
+                    required
+                  />
+              </div>
+                <div class="app-form-group">
+                  <input
+                    class="app-form-control"
+                    type="text"
+                    placeholder="Số điện thoại liên hệ"
+                    name="phoneNumber"
+                    required
+                    min="11"
+                    max="11"
+                  />
+                  <div class="app-form-group">
+                    <input
+                      class="app-form-control"
+                      type="text"
+                      placeholder="Địa chỉ"
+                      name="address"
+                      required
+                    />
+                </div>
+                <div class="app-form-group buttons">
+                  <button type="submit" class="app-form-button">SEND</button>
+                </div>
+              </div>
+            </div>
+        </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>

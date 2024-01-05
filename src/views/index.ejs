@@ -1,0 +1,144 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunsound - Solar Moment</title>
+    <link rel="stylesheet" href="/css/style.css" />
+   
+    <script
+      src="https://kit.fontawesome.com/ebbc506540.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="I:/fontawesome/css/fontawesome.css"
+    />
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+  </head>
+  <body style="background-color: blanchedalmond">
+    <header id="home" style="position: static; background: ivory">
+      <img
+        class="logo"
+        src="/image/logo.png"
+        alt="Not found"
+        onclick="dieuhuonglogo();"
+      />
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#" onclick="dieuhuonglogo();">Trang chủ</a></li>
+          <li>
+            <a href="#" onclick="dieu_huongvechungtoi();">Về chúng tôi</a>
+          </li>
+          <li><a href="#" onclick="dieu_huongsanpham();">Sản phẩm</a></li>
+          <li><a href="#" onclick="dieu_huongdonhang();">Đơn hàng</a></li>
+          <li><a href="#" onclick="dieu_huongtintuc();">Tin tức</a></li>
+          <li>
+            <a href="#" onclick="dieu_huongquanhedt();">Quan hệ đối tác</a>
+          </li>
+          <li><a href="#" onclick="dieu_huongphanhoi();">Phản hồi</a></li>
+          <li><a href="#" onclick="dieu_huonglienhe();">Giỏ hàng</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section
+      class="vechungtoi_section"
+      id="vechungtoi"
+      style="background-color: blanchedalmond"
+    >
+      <!-- <div class="vect1">
+        <img class="logo1" src="/image/logo.png" alt="Not found" />
+        <p class="text1">
+          SOLAR MOMENT ra đời với sứ mệnh tạo nên các sản phẩm khoa học - công
+          nghệ. Cốt lõi ứng dụng năng lượng mặt trời. Phát triển ngành năng
+          lượng tái tạo. Nâng cao chất lượng cuộc sống của con người. Hướng tới
+          xây dựng một hệ sinh thái hiện đại, thông minh, thân thiện với môi
+          trường. Không ngừng đổi mới, sáng tạo, tiên phong sản xuất, cung cấp
+          các sản phẩm và dịch vụ chất lượng, thân thiện với môi trường vì cuộc
+          sống tốt đẹp hơn cho cộng đồng và sự phát triển bền vững của xã hội.
+        </p>
+      </div>
+    </section> -->
+    <!-- <%= dataUser %> -->
+    <div class="w3-container">
+      <h2 style="padding-left: 20px ;position: relative;top: 30px">Giỏ hàng của tôi</h2>
+      <p></p>
+    
+      <table class="w3-table w3-bordered" style="position:relative; top: 50px; left: 20px; right: inherit;;">
+        <thread>
+          <tr class="w3-table-title">
+            <th>Mã đơn</th>
+            <th>Tên sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+            <th>Tên khách hàng</th>
+            <th>Số điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>              </th>
+          </tr>
+        </thread>
+        <tbody>
+          <% for(let i=0; i < dataUser.length; i++) { %>
+            <tr>
+              <td><%= dataUser[i].id %></td>
+              <td><%= dataUser[i].fullname %></td>
+              <td style=" text-align: center ;"><%= dataUser[i].amount %></td>
+              <td><%= new Intl.NumberFormat().format((dataUser[i].amount)*3000000) %> VND</td>
+              <td><%= dataUser[i].customername %></td>
+              <td><%= dataUser[i].phoneNumber %></td>
+              <td style="display:flexbox; width: 250px ;"><%= dataUser[i].address %></td>
+              <td style="display:flex ;">
+                <a class="buttona" href="/detail/orders/<%= dataUser[i].id %>" target="_blank">Detail</a>
+                <form action="/edit-order/<%= dataUser[i].id %>" method="GET">
+                <button class="buttona" type="submit">Edit</button>
+              </form>
+                <form action="/delete-order" method="POST">
+                  <input type="text" hidden value="<%= dataUser[i].id %>" name="orderID">
+                <button class="buttona" type="submit">Delete</button>
+              </form>
+              </td>
+
+            </tr>
+         <% } %>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- <section class="sanpham_section" id="sanpham">
+      <div class="slider">
+        <div class="dieuhuongslide">
+          <img class="dh1" src="./image/left-arrow (1).png" onclick="Back();" />
+          <img class="dh2" src="./image/right-arrow.png" onclick="Next();" />
+        </div>
+        <div class="chuyen_slide" style="text-align: center">
+          <img class="img1" src=".//image/img-share.jpg" />
+          <img class="img2" src="./image/Nakroth.jpg" />
+          <img
+            class="img3"
+            src="./image/4b3a1b156a571f4c9cf270dabeb637c25aa0b6e339303.jpg"
+          />
+          <img
+            class="img4"
+            src="./image/62cda115a78344fc4fa5154881c9da255c25f64ee32a7.jpg"
+          />
+          <img
+            class="img5"
+            src="./image/83d9de6ce9963f9ea406db2edd81707f5ee04e7551643.jpg"
+          />
+        </div>
+      </div>
+    </section> -->
+
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>
+
+<!--
+
+-->

@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Montserrat:wght@800&family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: cadetblue */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.logo {
+  max-width: auto;
+  max-height: 90px;
+}
+
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10%;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  position: fixed;
+  z-index: 100;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: rgb(14, 206, 65);
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rbga(0, 136, 160, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgb(73, 120, 61);
+}
+
+.buttona{
+  padding: 9px 25px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.buttona:hover{
+  background-color: rgb(73, 120, 61);
+}
+.slider {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+}
+
+.chuyen_slide {
+  width: 9999px;
+  transition: all 0.5s;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5 {
+  width: 1000px;
+  height: 400px;
+  float: left;
+}
+
+.dh1 {
+  font-size: 50px;
+  position: relative;
+  left: 0px;
+  top: 238px;
+  background: local;
+  max-height: 51px;
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+  opacity: 0.5;
+}
+
+.dh2 {
+  font-size: 51px;
+  position: relative;
+  left: 893px;
+  right: 900px;
+  top: 238px;
+  background: local;
+  max-height: 51px;
+  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+  opacity: 0.5;
+}
+
+.lienhe {
+  font-size: 25px;
+}
+
+.logo1 {
+  opacity: 0.2;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  top: 300px;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+.vect1 {
+  position: relative;
+  color: #000;
+  font-size: 16px;
+}
+
+.text1 {
+  position: absolute;
+  top: 55%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  background: local;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(30, 128, 11);
+  text-decoration: none;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.75;
+}
+html, body {
+    min-height: 100%;
+    }
+    body, div, form, input, select, p { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: #eee;
+    }
+    /* body {
+    background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+    background-size: cover;
+    } */
+    h1, h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    }
+    h2 {
+    margin: 0 0 0 8px;
+    }
+    .main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5); 
+    }
+    .left-part, form {
+    padding: 25px;
+    }
+    .left-part {
+    text-align: center;
+    }
+    .fa-graduation-cap {
+    font-size: 72px;
+    }
+    form {
+    background: rgba(0, 0, 0, 0.7); 
+    }
+    .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    .info {
+    display: flex;
+    flex-direction: column;
+    }
+    input, select {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    }
+    input::placeholder {
+    color: #eee;
+    }
+    option:focus {
+    border: none;
+    }
+    option {
+    background: black; 
+    border: none;
+    }
+    .checkbox input {
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+    }
+    .checkbox a {
+    color: #26a9e0;
+    }
+    .checkbox a:hover {
+    color: #85d6de;
+    }
+    .btn-item, button {
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px; 
+    border: none;
+    background: #26a9e0; 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    }
+    .btn-item {
+    display: inline-block;
+    margin: 20px 5px 0;
+    }
+    button {
+    width: 100%;
+    }
+    button:hover, .btn-item:hover {
+    background: #85d6de;
+    }
+    @media (min-width: 568px) {
+    html, body {
+    height: 100%;
+    }
+    .main-block {
+    flex-direction: row;
+    height: calc(100% - 50px);
+    }
+    .left-part, form {
+    flex: 1;
+    height: auto;
+    }
+    }
